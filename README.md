@@ -16,9 +16,7 @@ The following parts have been used for this robot
   * 3/8 inch inner-diameter rubber grommets (2)
 
 ##  Current Work
-  * Soldering battery connectors to switch
-  * Wiring motors
-  * Writing initial motor driver test software
+  * Wheel encoder sensor wiring/coding
 
 ##  Construction History/Notes
   * (5/7/16) Added capacitors and connection wires to motors (Do this before assembly!) \[Image 1\]
@@ -27,13 +25,17 @@ The following parts have been used for this robot
   * (5/13/16) Added top plate to base.  Mounted Arduino board
   * (5/16/16) Constructed tray for rechargable battery  \[Comment 3\] \[Image 3\]
   * (5/17/16) Installed tray for rechargable battery (widening of slots needed to install bolts) \[Image 4\]
-  * (5/19/16) Drilled holes in upper base for power/motor wires and installed grommets   \[Comment 4\]
+  * (5/19/16) Drilled holes in upper base for power/motor wires and installed grommets   \[Comment 4\] \[Image 5\]
+  * (5/21/16) Connected wires, re-assembled base, tested motor  \[Code 1\]
   
 ##  Comments
   1. - The instructions for putting on the wheel encoders doesn't place the sensor correctly.  There is plenty of hardware provided to adjust the spacing.  Play with it till it works.  \[Image 2\]
   2. - Rather than make my own bullet connector-to-wire connections, I bought a pre-made assembly and cut what I needed off of it.
   3. - I bent 1/4 inch sides on the long edge of the 3x6 inch aluminum, to make a 2-1/2x6 inch plate that was sturdier and had edges to keep the battery from sliding off.
   4. - Holes for grommets were 1/2" in diameter.
+  
+##  Code
+  1. - [Initial motor tests](Code/MotorTest.c).  Uses the 5 buttons to stop, go foreward, go backwards, turn left, and turn right
   
 ##  Images
   * Image1 - Capacitor and wires on motor:
@@ -44,5 +46,7 @@ The following parts have been used for this robot
 ![](Images/Image3.jpg?raw=true)
   * Image4 - Battery tray installed:
 ![](Images/Image4.jpg?raw=true)
+  * Image5 - Wire holes and grommets:
+![](Images/Image5.jpg?raw=true)
 
 
