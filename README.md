@@ -1,4 +1,4 @@
-# Robot
+﻿# Robot
 This is the journal/code repository for a physical robot I am working on to test some of the AI software I do in a real system.
 My intent is to use an Arduino computer for sensor/motor control, with a Raspberri Pi for high-level AI and vision.  Hardware is a simple 4-wheel platform purchased as a kit.
 
@@ -7,16 +7,19 @@ The following parts have been used for this robot
 
   * DFRobot 4WD Platform with encoders
   * DFRobot Romeo V 1.3 Arduino compatible controller with motor controllers
-  * 0.1 ?F ceramic capacitors (4)
+  * 0.1 μF ceramic capacitors (4)
   * 3x6x0.025 inch aluminum sheet (to make battery tray)
   * 6-32 1-1/2 inch bolts (4) 
   * 6-32 3/8 inch hex nuts (12)
   * Rechargable Lithium-Polymer battery (Turnigy 5000mAh 2S 40C Lipo Pack)
   * Bullet connector cable for battery (5.5mm Bullet to 4 x 4.0mm Multistar ESC Power Breakout Cable) \[Comment 2\]
   * 3/8 inch inner-diameter rubber grommets (2)
+  * LMS303 Tilt compensated 3-axis Compass (DFRobot RB-Dfr-421)
+
 
 ##  Current Work
   * Wiring compass module to microcontroller
+  * Writing compass calibration method up for this blog
 
 ##  Construction History/Notes
   * (5/7/16) Added capacitors and connection wires to motors (Do this before assembly!) \[Image 1\]
@@ -29,6 +32,7 @@ The following parts have been used for this robot
   * (5/21/16) Connected wires, re-assembled base, tested motor  \[Code 1\]
   * (6/14/16) Connected wheel encoders to Romeo microcontroller (digital pins 2 and 3)
   * (7/6/16) Calibrated Wheel Encoders  \[Code 2\]   \[Comment 5\]
+  * (7/13/16) Calibrated Compass from temporary wiring  \[Code 3\]
   
 ##  Comments
   1. - The instructions for putting on the wheel encoders doesn't place the sensor correctly.  There is plenty of hardware provided to adjust the spacing.  Play with it till it works.  \[Image 2\]
@@ -40,6 +44,7 @@ The following parts have been used for this robot
 ##  Code
   1. - [Initial motor tests](Code/MotorTest.c).  Uses the 5 buttons to stop, go foreward, go backwards, turn left, and turn right
   2. - [Encoder calibration tests](Code/EncoderTest.c).  Uses the 5 buttons to clear eeprom, do a calibration run, check calibration, and put results on serial port
+  3. - [Compass calibration tests](Code/CompassTest.c).  Displays heading, and can display raw data for determining calibration constants.  Use S2 button to write calibration constants (hard coded) into EEPROM
   
 ##  Images
   * Image1 - Capacitor and wires on motor:
