@@ -18,8 +18,8 @@ The following parts have been used for this robot
 
 
 ##  Current Work
-  * Wiring compass module to microcontroller
-  * Writing compass calibration method up for this blog
+  * Attaching compass module to robot
+
 
 ##  Construction History/Notes
   * (5/7/16) Added capacitors and connection wires to motors (Do this before assembly!) \[Image 1\]
@@ -32,7 +32,7 @@ The following parts have been used for this robot
   * (5/21/16) Connected wires, re-assembled base, tested motor  \[Code 1\]
   * (6/14/16) Connected wheel encoders to Romeo microcontroller (digital pins 2 and 3)
   * (7/6/16) Calibrated Wheel Encoders  \[Code 2\]   \[Comment 5\]
-  * (7/13/16) Calibrated Compass from temporary wiring  \[Code 3\]
+  * (7/13/16) Calibrated Compass from temporary wiring  \[Code 3\]  \[Article 1\]
   
 ##  Comments
   1. - The instructions for putting on the wheel encoders doesn't place the sensor correctly.  There is plenty of hardware provided to adjust the spacing.  Play with it till it works.  \[Image 2\]
@@ -45,6 +45,9 @@ The following parts have been used for this robot
   1. - [Initial motor tests](Code/MotorTest.c).  Uses the 5 buttons to stop, go foreward, go backwards, turn left, and turn right
   2. - [Encoder calibration tests](Code/EncoderTest.c).  Uses the 5 buttons to clear eeprom, do a calibration run, check calibration, and put results on serial port
   3. - [Compass calibration tests](Code/CompassTest.c).  Displays heading, and can display raw data for determining calibration constants.  Use S2 button to write calibration constants (hard coded) into EEPROM
+
+##  Articles
+  1. - [Compass Calibration](CompassCalibration.md).  Describes how to use the CompassTest code to get the calibration coefficients for the compass module
   
 ##  Images
   * Image1 - Capacitor and wires on motor:
